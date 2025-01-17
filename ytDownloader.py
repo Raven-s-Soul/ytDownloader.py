@@ -12,7 +12,7 @@ def download_video():
     for video in pl:
         try:
             # Create a YouTube object
-            yt = YouTube(video, on_progress_callback=on_progress)
+            yt = YouTube(video, on_progress_callback=on_progress) # use_po_token=True
 
             # Display the video title
             print(f"Downloading video: {yt.title}")
