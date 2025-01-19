@@ -54,13 +54,13 @@ def download_video(video):
 
         # Get the stream with the highest resolution (may be adaptive)
         video_stream = yt.streams.get_highest_resolution(False)
-        print_colored(f"Selected video stream: {video_stream.resolution} ({video_stream.fps}fps)", "green")
+        print_colored(f"Selected video stream: {video_stream.resolution} ({video_stream.fps}fps)", "yellow")
 
         # Check if the stream is adaptive
         if not video_stream.is_progressive:
             # Get the audio stream with the best quality
             audio_stream = yt.streams.filter(only_audio=True).order_by('abr').desc().first()
-            print_colored(f"Selected audio stream: {audio_stream.abr}", "green")
+            print_colored(f"Selected audio stream: {audio_stream.abr}", "yellow")
 
             if not audio_stream:
                 raise Exception('No suitable audio stream found.')
@@ -70,9 +70,9 @@ def download_video(video):
             
             # Download the video and audio streams
             video_path = video_stream.download(filename=video_name)
-            print_colored(f"Video stream downloaded: {video_path}", "green")
+            print_colored(f"Video stream downloaded: {video_path}", "purple")
             audio_path = audio_stream.download(filename=audio_name)
-            print_colored(f"Audio stream downloaded: {audio_path}", "green")
+            print_colored(f"Audio stream downloaded: {audio_path}", "purple")
             
             output_path = f"{re.sub(r'[\\/*?:"<>|]', '', yt.title)}.mp4"
             combine_streams(video_path, audio_path, output_path)
