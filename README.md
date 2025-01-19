@@ -29,7 +29,14 @@
 
 ### 4. Running the Script
 >- Double-click the script to run it.
->- Alternatively, run it from the terminal.
+>- Alternatively, run it from the terminal as:
+>
+>| Command | Explanation |
+>| :-- | :-- |  
+>|ytDownloader.py|Will prompt for input|
+>|ytDownloader.py @link |Provide a YouTube link to download the video|
+>|ytDownloader.py -h|Show help message for usage details|
+
 
 ### Expert Users
 > Put the `ytDownloader.py` script into your system's `path/bin`, making it usable in every folder.
