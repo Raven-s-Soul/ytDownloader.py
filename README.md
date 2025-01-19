@@ -13,16 +13,23 @@
 ## How to Use
 
 ### 1. Install Python
->Ensure that Python is installed on your system. You can download it from [here](https://www.python.org/downloads/) or winget, brew, apt, ...
+>Ensure that Python is installed on your system. You can download it from [here](https://www.python.org/downloads/) or `winget`, `brew`, `apt`, ...
 
 ### 2. Install Node.js
 >Ensure that Node.js is installed on your system. You can download it from [here](https://nodejs.org/en/download) or ...
 
 ### 3. Install Dependencies
->Once Python is installed, you need to install the required dependencies. 
->
+>Once Python is installed, you need to install the required dependencies as **administrator**. 
+> - Make sure the paths are working. 
 >You can do this by running the following command in your terminal:
 >
 >```bash
 >pip install -r requirements.txt
 >```
+
+### 4. Running the Script
+>- Double-click the script to run it.
+>- Alternatively, run it from the terminal.
+
+### Expert Users
+> Put the `ytDownloader.py` script into your system's `path/bin`, making it usable in every folder.
