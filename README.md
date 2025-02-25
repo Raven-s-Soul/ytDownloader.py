@@ -35,6 +35,7 @@
 >| Command | Explanation |
 >| :-- | :-- |  
 >|`ytDownloader.py`|Will prompt for input|
+>|`py ytDownloader.py`|Will prompt for input|
 >|`ytDownloader.py <link>` |Provide a YouTube link to download the video|
 >|`ytDownloader.py -h`|Show help message for usage details|
 
