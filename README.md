@@ -12,13 +12,17 @@
 
 ## How to Use
 
-### 1. Install Python
+### 1. Install FFmpeg
+>An open-source tool for converting, editing, and streaming video and audio files in different formats.
+>> [Download page](https://www.ffmpeg.org/download.html) or `winget`, `brew`, `apt`, ...
+
+### 2. Install Python
 >Ensure that Python is installed on your system. You can download it from [here](https://www.python.org/downloads/) or `winget`, `brew`, `apt`, ...
 
-### 2. Install Node.js
+### 3. Install Node.js
 >Ensure that Node.js is installed on your system. You can download it from [here](https://nodejs.org/en/download) or ...
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 >Once Python is installed, you need to install the required dependencies as **administrator**. 
 > - Make sure the paths are working. 
 >You can do this by running the following command in your terminal:
@@ -27,7 +31,7 @@
 >pip install -r requirements.txt
 >```
 
-### 4. Running the Script
+### 5. Running the Script
 >[!TIP]
 >>- Double-click the script to run it.
 >>- Alternatively, run it from the terminal as:
