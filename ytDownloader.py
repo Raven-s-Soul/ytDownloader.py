@@ -49,7 +49,8 @@ def combine_streams(video_path, audio_path, output_path):
 def download_video(video):
     try:
         # Create a YouTube object
-        yt = YouTube(video, 'WEB', on_progress_callback=on_progress)  # use_po_token=True
+        # yt = YouTube(video, 'WEB', on_progress_callback=on_progress)  # use_po_token=True
+        yt = YouTube(video, on_progress_callback=on_progress)
         print_colored(f"Downloading video: {yt.title}", "green")
 
         # Get the stream with the highest resolution (may be adaptive)
