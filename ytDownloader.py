@@ -1,16 +1,19 @@
 from pytubefix import Playlist, YouTube
 from pytubefix.cli import on_progress
+import time
 import re  # Import the 're' module for regular expressions
 import os
 import subprocess
 import argparse
 from colorama import just_fix_windows_console
 
+# --- Argument parsing ---
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Process a YouTube URL for downloading videos.")
     parser.add_argument('url', type=str, nargs='?', default=None, help="The YouTube URL (optional)")    
     return parser.parse_args()
-
+    
+# --- Colored print helper ---
 def print_colored(text, color):
     colors = {
         'red': '\033[31m',
@@ -75,6 +78,7 @@ def download_video(video):
             audio_path = audio_stream.download(filename=audio_name)
             print_colored(f"Audio stream downloaded: {audio_path}", "purple")
             
+            
             output_path = f"{re.sub(r'[\\/*?:"<>|]', '', yt.title)}.mp4"
             combine_streams(video_path, audio_path, output_path)
         else:
@@ -105,6 +109,8 @@ def CoreLogic():
             print_colored(text, 'cyan')
             #print(f"Processing video {index} of {len(pl.video_urls)}")
             download_video(video)
+            print_colored("5 seconds delay before next download", 'cyan')
+            time.sleep(5) # Trying to not get banned
     elif "list" not in url:         
     # if isPlaylist == 'n':
         download_video(url)
